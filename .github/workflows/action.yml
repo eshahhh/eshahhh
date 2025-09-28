@@ -19,13 +19,12 @@ jobs:
         with:
           username: ${{ github.repository_owner }}
           style: graph
-          output_dir: output 
           TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/graph-eshahhh.svg
+          git add graph-eshahhh.svg
           git commit -m "Update weekly contribution graph" || exit 0
           git push
