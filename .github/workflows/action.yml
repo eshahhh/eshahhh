@@ -9,6 +9,7 @@ on:
 jobs:
   generate-graph:
     runs-on: ubuntu-latest
+    environment: runner
     permissions:
       contents: write
     
